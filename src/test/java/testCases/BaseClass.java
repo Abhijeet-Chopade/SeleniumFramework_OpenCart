@@ -47,7 +47,7 @@ public class BaseClass {
 		driver.manage().deleteAllCookies();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		
-		driver.get(p.getProperty("appURL"));     // Reading URL from properties file
+		driver.get(p.getProperty("appURLOrangeHRM"));     // Reading URL from properties file
 		driver.manage().window().maximize();
 		
 	}

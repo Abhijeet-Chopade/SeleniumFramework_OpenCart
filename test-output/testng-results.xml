@@ -2,12 +2,12 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-09-01T15:58:28 IST" name="Suite" finished-at="2026-09-01T15:58:33 IST" duration-ms="4758">
+  <suite started-at="2026-09-04T15:18:33 IST" name="Suite" finished-at="2026-09-04T15:20:08 IST" duration-ms="95684">
     <groups>
     </groups>
-    <test started-at="2026-09-01T15:58:28 IST" name="Test" finished-at="2026-09-01T15:58:33 IST" duration-ms="4758">
-      <class name="testCases.TC_01_OrangeHRM_Login">
-        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String)[pri:0, instance:testCases.TC_01_OrangeHRM_Login@ed7f8b4]" started-at="2026-09-01T15:58:28 IST" name="setup" finished-at="2026-09-01T15:58:32 IST" duration-ms="3984" status="PASS">
+    <test started-at="2026-09-04T15:18:33 IST" name="Test" finished-at="2026-09-04T15:20:08 IST" duration-ms="95684">
+      <class name="testCases.TC02_OrangeHRM_JobTitle">
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String)[pri:0, instance:testCases.TC02_OrangeHRM_JobTitle@6ab778a]" started-at="2026-09-04T15:18:33 IST" name="setup" finished-at="2026-09-04T15:18:42 IST" duration-ms="9517" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -23,11 +23,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="Verify_OrangeHRM_Login()[pri:0, instance:testCases.TC_01_OrangeHRM_Login@ed7f8b4]" started-at="2026-09-01T15:58:32 IST" name="Verify_OrangeHRM_Login" finished-at="2026-09-01T15:58:33 IST" duration-ms="519" status="PASS">
+        <test-method signature="Verify_OrangeHRM_JobTitle()[pri:0, instance:testCases.TC02_OrangeHRM_JobTitle@6ab778a]" started-at="2026-09-04T15:18:42 IST" name="Verify_OrangeHRM_JobTitle" finished-at="2026-09-04T15:20:08 IST" duration-ms="85874" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Verify_OrangeHRM_Login -->
-      </class> <!-- testCases.TC_01_OrangeHRM_Login -->
+        </test-method> <!-- Verify_OrangeHRM_JobTitle -->
+      </class> <!-- testCases.TC02_OrangeHRM_JobTitle -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>

@@ -1,5 +1,10 @@
 package testCases;
 
+import java.awt.AWTException;
+import java.awt.Robot;
+import java.awt.Toolkit;
+import java.awt.datatransfer.StringSelection;
+import java.awt.event.KeyEvent;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
@@ -9,6 +14,7 @@ import java.util.Date;
 import java.util.Properties;
 
 import org.apache.commons.lang3.RandomStringUtils;
+import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -17,6 +23,11 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
+
+import java.time.Duration;
+
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class BaseClass {
 	
@@ -45,7 +56,7 @@ public class BaseClass {
 		}
 		// driver = new ChromeDriver();
 		driver.manage().deleteAllCookies();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 		
 		driver.get(p.getProperty("appURLOrangeHRM"));     // Reading URL from properties file
 		driver.manage().window().maximize();
@@ -96,4 +107,44 @@ public class BaseClass {
 	   
 		
 	}
+	
+	
+	
+	public void uploadFileUsingBrowse(By browseButton, String filePath) throws AWTException
+	{
+		
+		WebDriverWait wait =
+		        new WebDriverWait(driver, Duration.ofSeconds(20));
+
+		wait.until(
+		        ExpectedConditions.elementToBeClickable(By.xpath("//div[text()='Browse']"))
+		).click();
+		
+		Robot robot = new Robot();
+		
+		StringSelection file = new StringSelection(filePath);
+		
+		Toolkit.getDefaultToolkit()
+		.getSystemClipboard()
+		.setContents(file, null);
+		
+		robot.delay(1000);
+		
+		robot.keyPress(KeyEvent.VK_CONTROL);
+		robot.keyPress(KeyEvent.VK_V);
+		
+		robot.keyPress(KeyEvent.VK_V);
+		robot.keyPress(KeyEvent.VK_CONTROL);
+		
+		robot.delay(500);
+		
+		robot.keyPress(KeyEvent.VK_ENTER);
+		robot.keyPress(KeyEvent.VK_ENTER);
+		
+		robot.delay(1000);
+		
+		
+	}
+	
+	
   }
